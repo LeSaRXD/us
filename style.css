@@ -1,0 +1,105 @@
+:root {
+	--bg: #322222;
+	--fg: #cacaca;
+}
+
+body {
+	width: 100vw;
+	width: 100dvw;
+	height: 100vh;
+	height: 100dvh;
+	margin: 0;
+
+	font-size: 14pt;
+}
+
+h1,
+h3 {
+	font-weight: unset;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+main>section {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	color: #fff;
+	font-weight: 400;
+
+	background-position: center;
+	background-size: cover;
+
+	transition-duration: 0.5s;
+	transition-property: flex-grow;
+}
+
+main>section:hover {
+	flex-grow: 3;
+}
+
+main>section::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: #00000066;
+	backdrop-filter: blur(3px);
+
+	transition-duration: 0.5s;
+	transition-property: backdrop-filter background-color;
+}
+
+main>section:hover::before {
+	background-color: #00000044;
+	backdrop-filter: blur(0px);
+}
+
+main>section * {
+	z-index: 2;
+}
+
+#moss {
+	background-image: url("./img/moss.jpg");
+	font-family: sans-serif, serif;
+}
+
+#gray {
+	background-image: url("./img/gray.jpg");
+	font-family: "Sniglet", system-ui;
+}
+
+#adrian {
+	background-image: url("./img/adrian.jpg");
+	font-family: "PT Serif", serif;
+}
+
+#sky {
+	background-image: url("./img/sky.jpg");
+	font-family: serif;
+}
+
+#kitty {
+	background-image: url("./img/kitty.jpg");
+	font-family: "Crafty Girls", cursive;
+}
+
+#littleshit {
+	background-image: url("./img/littleshit.jpg");
+	font-family: "Barriecito", cursive, system-ui;
+}

@@ -1,0 +1,15 @@
+{
+	"name": "webbed-site",
+	"version": "1.0.0",
+	"description": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"compile": "npx tsc",
+		"start": "npm run compile && web-serve 8080",
+		"dev": "npx tsc --watch & web-serve 8080"
+	},
+	"dependencies": {
+		"typescript": "^7.0.2"
+	}
+}
